@@ -1,0 +1,7 @@
+include(":log")
+include(":core")
+include(":presentation")
+include(":domain")
+include(":data")
+include(":database")
+include(":remote")

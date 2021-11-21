@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/cryptoGraph">
+
+    <navigation android:id="@+id/cryptoGraph"
+        app:startDestination="@id/cryptoListFragment">
+        <fragment
+            android:id="@+id/cryptoListFragment"
+            android:name="com.sinaseyfi.presentation.ui.crypto.list.CryptoListFragment"
+            android:label="CryptoListFragment">
+            <action
+                android:id="@+id/action_cryptoListFragment_to_cryptoDetailsFragment"
+                app:destination="@id/cryptoDetailsFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/cryptoDetailsFragment"
+            android:name="com.sinaseyfi.presentation.ui.crypto.details.CryptoDetailsFragment"
+            android:label="CryptoDetailsFragment" />
+    </navigation>
+</navigation>
